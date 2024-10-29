@@ -1,0 +1,120 @@
+/* General Mobile Optimized Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  #hero {
+    height: 100vh;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+  }
+  
+  .typing, .typing-p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  img {
+    border: 4px solid white;
+    width: 120px; /* Reduce the size for mobile */
+  }
+  
+  #skills .col-6, #projects .col-12 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; transform: none; }
+  }
+  
+  /* Responsive Skills Section */
+  #skills i {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  h5 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  #projects h5 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  #projects p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Water wave background */
+  .wave {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: url('wave.png');
+    background-size: cover;
+    animation: wave-animation 5s infinite linear;
+    z-index: -1;
+  }
+  
+  @keyframes wave-animation {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+  }
+  
+  /* Contact Section Icons */
+  #contact a {
+    color: #007bff;
+  }
+  
+  #contact a:hover {
+    transform: scale(1.15);
+    transition: 0.3s;
+  }
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    background: #3c31dd;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}

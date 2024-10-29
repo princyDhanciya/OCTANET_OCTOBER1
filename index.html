@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Coffee Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barrio&family=Kaushan+Script&family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+       <!-- icon link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Background and general styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('/10801858.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #F8E7D1;
+            
+            overflow-x: hidden;
+            height: 100vh;
+            animation: backgroundZoom 15s ease-in-out infinite;
+        }
+        .barrio-regular {
+    font-family: "Barrio", system-ui;
+    font-weight: 800;
+    font-size: 3.5em; /* Adjust font size as desired */
+    font-style: normal;
+    color: #533d1f;
+}
+
+        /* Animation for background image 
+        @keyframes backgroundZoom {
+            0% { background-size: 100%; }
+            50% { background-size: 110%; }
+            100% { background-size: 100%; }
+        }
+
+        /* Navbar styling - fixed at top */
+        .navbar {
+            background-color: #e0ad6573;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #533d1f;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand .fa-coffee {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: #533d1f;
+        }
+
+        .navbar-nav .nav-link {
+            color: #492e0a;
+        }
+
+        /* Main section text styling */
+        
+    /* Adjust the landing container position to the right */
+    .landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 300px; /* Adjust padding to suit your needs */
+    padding-left:900px; /* Shift the content slightly to the right */
+}
+
+
+       
+
+        .landing-container p {
+            font-size: 1.5rem;
+            color: #251e19e5;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            margin-top: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Coffee cup button styling */
+        .coffee-btn {
+            position: relative;
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #C99D7B;
+            color: #4A2C2A;
+            border: none;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            text-decoration: none;
+            border-radius: 50px 50px 0 0;
+            overflow: hidden;
+            margin: 20px 10px;
+            transition: background-color 0.3s ease;
+            width: 120px;
+            text-align: center;
+            transform: rotate(180deg); /* Invert the coffee cup */
+        }
+
+        .coffee-btn:hover {
+            background-color: #4A2C2A;
+            color: #F8E7D1;
+        }
+
+        .coffee-btn:before {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 10px;
+            width: 20px;
+            height: 40px;
+            border: 4px solid #4A2C2A;
+            border-radius: 50px;
+            background-color: transparent;
+        }
+
+        .coffee-btn:after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 15px;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4A2C2A;
+            border-radius: 50%;
+        }
+
+        /* Steam effect */
+       
+  
+
+      
+        /* Footer styling */
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #35240e;
+            margin-top: 20px;
+        }
+
+        .footer i {
+            font-size: 1.2rem;
+        }
+        .hero-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    transition: all .5s ease;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hero-text h1 span {
+    font-weight: 700;
+    color: #FFBD7F;
+}
+
+.hero-text p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.hero-text button {
+    border: none;
+    border-radius: 26px;
+    padding: 12px 5%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    transition: all 0.5s ease;
+}
+
+
+.hero-text button ion-icon {
+    background-color: #FFBD7F;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    width: 20px;
+    vertical-align: middle;
+    transition: all .5s ease;
+}
+
+.hero-text button:hover {
+    background-color: #FFBD7F;
+    transition: all .5s ease;
+}
+
+.hero-text button:hover ion-icon {
+    background-color: #A0583C;
+    transition: all .5s ease;
+}
+
+.hero-img {
+    position: relative;
+}
+
+#hero-coffee {
+    min-width: 500px;
+}
+
+.hero-img-bg {
+    position: absolute;
+    z-index: -10;
+    background-color: #ffc690bd;
+    width: 550px;
+    height: 800px;
+    top: -25%;
+    left: 45%;
+}
+
+.hero-img-bg img {
+    position: absolute;
+    width: 380px;
+    top: 2%;
+    right: 2%;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 7.5% 8% 30px 8%;
+    transition: all .5s ease;
+}
+
+.hero-bottom-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    align-items: center;
+    background-color: #ffd19ce5;
+    padding: 20px 5%;
+    border-radius: 54px;
+}
+
+.hero-bottom-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-bottom-detail img {
+    vertical-align: middle;
+}
+
+.hero-bottom-detail p {
+    font-size: 20px;
+    font-weight: 600;
+    color:#2b1c11;
+    text-align: left;
+    padding-top: 10%;
+}
+
+#tea-text {
+    padding-top: 0;
+}
+
+/* Cold coffee menu section */
+
+.coldcoffee-container {
+    padding: 20px 8%;
+    transition: all .5s ease;
+}
+
+.coldcoffee-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.coldcoffee-container h2 span {
+    font-weight: 600;
+    border-bottom: 3px solid #FFBD7F;
+}
+
+.coldcoffee-menus {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    position: relative;
+}
+
+.menu-container {
+    max-width: 300px;
+    background-color: #835E4C;
+    padding: 15px;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.menu-img img {
+    border-radius: 24px;
+    width: 100%;
+}
+
+.menu-content {
+    color: #fff;
+}
+
+.menu-content h3 {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 15px 0;
+}
+
+.menu-content p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+    color: #fff;
+}
+
+.menu-price p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu-price button {
+    border: none;
+    border-radius: 14px;
+    padding: 10px 10%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #A0583C;
+    transition: all .5s ease;
+}
+
+.menu-container:hover {
+    background-color: #FFBD7F;
+    transform: translateY(-20px);
+    transition: all .5s ease;
+}
+
+.menu-container:hover .menu-content {
+    color: #A0583C;
+    transition: all .5s ease;
+}
+
+.menu-container:hover .menu-price {
+    color: #A0583C;
+    transition: all .5s ease;
+}
+
+.coldcoffee-menus::before {
+    content: '<';
+    position: absolute;
+    font-size: 50px;
+    left: -2%;
+    top: 45%;
+    z-index: 20;
+    background-color: #fff;
+    color: #835E4C;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.coldcoffee-menus::after {
+    content: '>';
+    position: absolute;
+    font-size: 50px;
+    right: -2%;
+    top: 45%;
+    z-index: 20;
+    background-color: #ffffff;
+    color: #835E4C;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.hero-text p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.hero-text button {
+    border: none;
+    border-radius: 26px;
+    padding: 12px 5%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    transition: all .5s ease;
+}
+
+.hero-text button ion-icon {
+    background-color: #FFBD7F;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    width: 20px;
+    vertical-align: middle;
+    transition: all .5s ease;
+}
+.about-container {
+    width: 100%;
+    margin: 2% 0;
+    display: flex;
+    background-color: #F6EBDA;
+    padding: 30px 8%;
+    transition: all .5s ease;
+    gap: 100px;
+}
+
+.about-img {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42%;
+}
+
+.about-content h3 {
+    font-size: 34px;
+    font-weight: 600;
+    color:#4A2C2A;
+      
+}
+
+.about-content h3 span {
+    font-weight: 600;
+    border-bottom: 3px solid #FFBD7F;
+}
+
+.about-content h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0;
+    color:#f8b680;
+}
+
+.about-content p {
+    font-size: 18px;
+    font-weight: 400;
+    color:#c2926c;
+}
+
+.about-button {
+    padding-top: 20px;
+}
+
+.about-button button {
+
+    border: none;
+    border-radius: 24px;
+    padding: 10px 3%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #A0583C;
+    transition: all .3s ease;
+}
+
+.about-button button:hover {
+    background-color: #2F2105;
+    transition: all .3s ease;
+}
+.hero-text button:hover {
+    background-color: #FFBD7F;
+    transition: all .5s ease;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-coffee"></i> princeCaffey
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">How to Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <button class="btn btn-custom">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+   <!-- Main content -->
+<section class="landing-container">
+    <h1 class="barrio-regular">Start Your Morning With Coffee</h1>
+    <div class="hero-text">
+        <p>Slip, savour and spread the love - where <br> every cup is a caffeinated hug at our cozy <br> coffee haven!</p>
+        <button>Order now <ion-icon name="cart-outline"></ion-icon></button>
+    </div>
+</section>
+    <section class="about-container">
+        <div class="about-img">
+            <img src="assets/about-img.jpeg" alt="about img">
+        </div>
+        <div class="about-content">
+            <h3>About <span>us</span></h3>
+            <h4>Slip into perfection</h4>
+            <p>Our Coffee World, where passion meets precision in every brew, bringing you a symphony of flavors and
+                a journey through the rice, aromatic realms of coffee craftsmanship. </p>
+            <div class="about-button">
+                <button>Start Your Order</button>
+            </div>
+        </div>
+    </section>
+           <div class="hero-bottom">
+            <div class="hero-bottom-container">
+                <div class="hero-bottom-detail">
+                    <img src="assets/hot-coffee.png" alt="hot coffee">
+                    <p>Hot Coffee</p>
+                </div>
+                <div class="hero-bottom-detail">
+                    <img src="assets/cold-coffee.png" alt="cold coffee">
+                    <p>Cold Coffee</p>
+                </div>
+                <div class="hero-bottom-detail">
+                    <img id="tea-img" src="assets/tea.png" alt="tea">
+                    <p id="tea-text">Tea</p>
+                </div>
+                <div class="hero-bottom-detail">
+                    <img src="assets/dessert.png" alt="dessert">
+                    <p>Dessert</p>
+                </div>
+            </div>
+   
+   
+   
+
+    <!-- Footer -->
+    <div class="footer">
+        <i class="fas fa-phone"></i> 714-980-7716
+        <i class="fas fa-envelope"></i> order@princy.com
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
